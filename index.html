@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="valentine.css" />
+  </head>
+  <body >
+
+    <p>
+     feriel ferais-tu l'honneur de sortir avec moi… ?
+    </p>
+   
+    
+    
+    <button class="answerButton" id="oussama" onclick="window.location.href='thankyou.html'">Oui, j'accepte ouss </button>
+   
+    <button class="answerButton" id="noButton">Non, je ne veux pas o(╥﹏╥)o</button>
+      
+  
+  <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; 
+        });
+   </script>
+ </body>
+</html>
